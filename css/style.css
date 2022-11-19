@@ -1,0 +1,773 @@
+
+/* Variables */
+:root {
+    /* Colores */
+    --clr-primary-background: rgb(177, 25, 72);
+    --clr-dark-background: rgb(183, 163, 169);
+    --clr-bg-soft: rgb(240, 216, 222);
+    --clr-primary-text: rgb(60, 60, 59);
+    --clr-accent: rgb(213, 0, 113);
+    --clr-neutral-lightgray: rgb(198, 198, 199);
+    --clr-neutral-white: rgb(255, 255, 255);
+    --clr-neutral-black: rgb(0,0,0);
+    --box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+
+    /* Font Family */
+    --ff-primary: 'lato', sans-serif;
+    --ff-body: var(--ff-primary);
+    --ff-headings: var(--ff-primary);
+
+    /* Font Weight */
+    --fw-regular: 400;
+    --fw-semibold: 700;
+    --fw-bold: 900;
+
+    /* Font Size */
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.875rem;
+    --fs-h3: 1.5rem;
+    --fs-h4: 1.25rem;
+    --fs-p: 1.1rem;
+
+    /* Small screen font size */
+    --fs-s-h1: 2.3rem;
+    --fs-s-h2: 1.6rem;
+    --fs-s-h3: 1.2rem;
+    --fs-s-h4: 1.125rem;
+    --fs-s-p: 1rem;
+
+    /* Espacio entre secciones */
+    --pdt: 90px;
+} 
+
+/* Reseteo CSS */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+}
+
+/* Reglas del Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+} 
+
+/* Removiendo el estilo de las listas con role list */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Para trabajar mas facil con las imagenes */
+img, picture, svg {
+    max-width: 100%;
+}
+
+/* Textos */
+h1 {
+    text-align: center;
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary-text);
+    padding: 20px 0;
+}
+h2 {
+    text-align: center;
+    font-size:  var(--fs-h2);
+    font-weight: var(--fw-semibold);
+    padding: 20px 0;
+    color: var(--clr-primary-text);
+}
+h3{
+    text-align: center;
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    color: var(--clr-primary-text);
+    padding: 10px 0;
+}
+p {
+    font-size: var(--fs-p);
+    font-weight: var(--fw-regular);
+    color: var(--clr-primary-text);
+    text-align: left;
+}
+
+/* configuracion general de secciones */
+.section {
+    width: 80%;
+    margin: auto;
+    padding-top: var(--pdt);
+}
+.section-row {
+    display: flex;
+    justify-content: space-between;
+}
+.section-row img{
+    border-radius: 10px;
+}
+
+/* Margen entre sectores */
+.mrgn {
+    margin-top: 5%;
+}
+.pdng {
+    padding-top: var(--pdt);
+}
+
+/* ------------------------ Pagina index ----------------- */
+
+/* Header index */
+.header {
+    min-height: 100vh;    
+    width: 100%;
+    background-image: linear-gradient(0deg, rgba(105,80,88,0.5) 0%, rgba(105,80,88,0.5) 100%), url("../resources/banner/bn1.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+/* Header demas paginas*/
+.sub-header {
+    height: 43vh;
+    width: 100%;
+    background-image: linear-gradient(0deg, rgba(105,80,88,0.5) 0%, rgba(105,80,88,0.5) 100%), url("../../arpinpage/resources/banner/bn2.jpeg");
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--box-shadow);
+}
+.sub-header h1 {
+    font-size: var(--fs-h1);
+    letter-spacing: 3px;
+    color: var(--clr-neutral-white);
+    margin-top: 100px;
+}
+
+/* Barra de navegacion */
+nav {
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: center;
+}
+.site-logo h1 {
+    text-align: left;
+    color: var(--clr-neutral-white);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-semibold);
+    padding: 0;
+    margin: 0;
+}
+.logo-image {
+    height: 70px;
+    padding: 10px;
+    cursor: pointer;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    display: inline-block;
+    padding: 0 8px;
+    position: relative;
+}
+.nav-links a {
+    color: var(--clr-neutral-white);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-regular);
+}
+/* Linea debajo del menu */
+.nav-links li::after {
+    display: block;
+    margin: auto;
+    content: '';
+    width: 0%; /*para que esté oculta*/
+    height: 3px;/* grosor de linea */
+    background: var(--clr-accent);
+    transition: 0.5s;
+}
+.nav-links li:hover::after {
+    width: 100%; /* para que se muestre*/
+}
+/* iconos menu movil Font Awesome ocultos en pantallas grandes*/
+nav .fas {
+    display: none;
+}
+
+
+
+/* seccion header */
+.hero-textbox {
+    width: 90%;
+    color: var(--clr-neutral-white);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.hero-textbox h1{
+    font-weight: var(--fw-semibold);
+    color: var(--clr-neutral-white);
+}
+.hero-textbox h3 {
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-white);
+    margin: 10px 0 40px;
+}
+.hero-button {
+    display: inline-block;
+    background-color: transparent;
+    padding: 12px 34px;
+    border: 1px solid var(--clr-neutral-white);
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.hero-button a{
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-p);
+    color: var(--clr-neutral-white);
+}
+.hero-button:hover {
+    border: 1px solid var(--clr-accent);
+    background-color: var(--clr-accent);
+    font-weight: var(--fw-semibold);
+    box-shadow: var(--box-shadow);
+    transition: 1s;
+}
+
+/* Segunda seccion index */
+.cards-col {
+    flex-basis: 31%; /* tamaño inicial */
+    background: var(--clr-neutral-white);
+    border-radius: 10px;
+    border: 1px solid var(--clr-primary-text);
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    transition: 0.5s;
+}
+.cards-col h3 {
+    margin: 5px 0;
+}
+.cards-col p {
+    text-align: center;
+}
+.cards-col:hover {
+    box-shadow:  var(--box-shadow);
+
+}
+
+
+/* Seccion 3 index */
+.hvr-pictures {
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.hvr-pictures img {
+    display: block;
+    width: 100%;
+    
+}
+.layer-pic {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.layer-pic:hover {
+    background: rgba(60,60,59,0.5);
+}
+.layer-pic h3 {
+    width: 100%;
+    font-weight: var(--fw-semibold);
+    color: var(--clr-neutral-white);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer-pic:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+
+/* Seccion 5 index */
+.testimonials-col {
+    display: flex;
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background-color: var(--clr-bg-soft);
+    padding: 25px;
+    cursor: default;
+}
+.testimonials-col img {
+    height: 60px;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+.testimonials-col p {
+    padding: 0;
+}
+.testimonials-col h3 {
+    margin-top: 15px;
+    text-align: left;
+    padding: 0;
+}
+.stars {
+    color: rgba(230, 186, 28, 0.941);
+}
+
+/* Anuncio de contacto index */
+.contact-us {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(0deg, rgba(60,60,59,0.7) 0%, rgba(60,60,59,0.7) 100%), url("../../arpinpage/resources/more/arqueologia-georadar.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 70px 0;
+}
+.contact-us h2 {
+    color: var(--clr-neutral-white);
+    text-decoration: none;
+}
+.contact-us h3 {
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-regular);
+}
+
+.contact-us .hero-button {
+    margin: 20px;
+}
+
+
+/* --------------------- Pagina Nosotros ----------------- */
+
+/* Seccion Nosotros */
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: left;
+}
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col h2 {
+    padding: 0;
+    text-align: left;
+}
+.about-col p {
+    padding: 15px 0 25px;
+}
+.about-col img {
+    width: 100%;
+}
+
+
+/* --------------------- Pagina Servicios ----------------- */
+
+.services-col {
+    flex-basis: 31%;
+    text-align: left;
+    padding: 20px 0;
+}
+.services-col p {
+    padding: 0;
+    text-align: left;
+}
+.services-col h3 {
+    margin-top: 16px;
+    text-align: left;
+    padding: 0;
+    text-align: left;
+}
+
+
+/* -------------------  Pagina proyectos  -------------------- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/* Autofit: se ajusta a la cantidad de cajas. Autofill: Se ajusta al contenido de las cajas. minmax: establece el minimo y el maximo del tamaño de cada columna */
+    grid-auto-rows: minmax(200px, auto); /* configura las filas. Que tengan una alto minimo de 200px, y ocupe un maximo de 1 fraccion del contenedor */
+    gap: 20px; /* brecha entre caja y caja */
+    padding: 30px 10px;
+    grid-auto-flow: dense; /* Ayuda a llenar cualquier espacio en blanco que quede al reducir la pantalla */
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #03afff;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.grid-item:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+@media (min-width: 700px) {
+    .wide {
+    grid-column: span 2; /* #dondecomienza / #dondetermina El primer numero define la cantidad de columnas que quiere que el item especifico ocupen dentro de la grid, especificamente DONDE COMIENZA la cantidad de columnas. Se guia por lineas imaginarias que se pueden encontrar en layout chrome. El segundo numero Define DONDE TERMINA el el item especifico en el grid. Se guia por lineas imaginarias que se pueden encontrar en layout chrome */
+    }
+    .tall {
+        grid-row: span 2;
+    }
+}
+
+
+/* --------------------- Pagina Blog ---------------------- */
+.blog-left {
+    flex-basis: 65%; /* Alarga la columna */
+}
+.blog-left img {
+    width: 100%;
+}
+.blog-left h2 {
+    margin: 30px 0;
+    text-align: left;
+}
+.blog-left p {
+    padding: 0;
+}
+
+.blog-right {
+    flex-basis: 32%;
+    padding: 50px 20px;
+}
+.blog-right div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.blog-right h3 {
+    background-color: var(--clr-accent);
+    color: var(--clr-neutral-white);
+    padding: 7px 0;
+    margin-bottom: 20px;
+    font-size: var(--fs-p);
+}
+
+
+/* --------------------- Pagina Contacto ----------------- */
+
+/* Google maps */
+.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.location iframe {
+    width: 100%;
+}
+
+/* Informacion de contacto */
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+.contact-col  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col i {
+    display: flex;
+    flex-direction: row;
+    color: var(--clr-accent);
+    font-size: 1.75rem;
+    margin-right: 20px;
+}
+.contact-col h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+}
+.contact-col h4 {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-regular);
+    padding: 0;
+    text-align: left;
+}
+/* formulario */
+.contact-col input, .contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.contact-col .button {
+    display: block;
+    margin: auto;
+    border: 2px solid var(--clr-primary-background);
+    background: transparent;
+    color: var(--clr-primary-background);
+    font-weight: var(--fw-semibold);
+}
+.contact-col .button:hover {
+    background-color: var(--clr-primary-background);
+    color: var(--clr-neutral-white);
+    border: 1px solid var(--clr-primary-background);
+}
+
+
+/* --------------------- Footer ---------------------- */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 30px 60px;
+    margin-top: 200px;
+    background-color: var(--clr-dark-background);
+    color: var(--clr-primary-text);
+}
+.footer-logo {
+    width: 200px;
+    height: auto;
+}
+/* .footer h4 {
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: var(--fw-bold);
+}
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.icons {
+    color: var(--clr-primary-background);
+    padding: 0 10px;
+} */
+.social-icons i {
+    color: var(--clr-primary-background);
+    font-size: 20px;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 50px 0 30px 0;
+}
+
+
+
+
+
+/* -------------- Diseño pantallas pequeñas -------------------------- */
+@media(max-width: 900px) {
+    /* secciones */
+    .section {
+        padding-top: var(--pdt);
+    }
+    .section-row {
+        flex-direction: column;
+    }
+
+    /* Textos */
+    h1 {
+        font-size: var(--fs-s-h1);
+        font-weight: var(--fw-bold);
+    }
+    h2 {
+        font-size: var(--fs-s-h2);
+        font-weight: var(--fw-bold);
+    }
+    h3 {
+        font-size: var(--fs-s-h3);
+        font-weight: var(--fw-semibold);
+    }
+    h4 {
+        font-size: var(--fs-s-h4);
+        font-weight: var(--fw-semibold);
+    }
+    p {
+        font-size: var(--fs-s-p);
+        font-weight: var(--fw-regular);
+    }
+
+    /* Tamaño imagenes */
+    .images {
+        display: block;
+        margin: auto;
+        width: 85%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    /* logo */
+    .site-logo a { 		
+        background-image:url(../resources/brand/logoNegativeMobile.png); 		
+        display: block; 		
+        background-size:contain; 		
+        background-repeat: no-repeat; 		
+        background-position: center; 		
+        width:65px; 		
+        height:65px;
+    } 
+    .site-logo h1, .site-logo h2, .logo-image { 		
+        display:none; 	
+    } 
+
+    /* --------------------- Header demas paginas ------------------- */
+    .sub-header {
+        height: 40vh;
+    }
+    .sub-header h1 {
+        font-size: var(--fs-s-h1);
+        margin-top: 50px;
+    }
+
+    /* --------------------- Pagina index ---------------------- */
+    
+    /* header */
+    .hero-textbox h1{
+        font-size: var(--fs-s-h1);
+        font-weight: var(--fw-bold);
+    }
+    .hero-textbox p {
+        font-size: var(--fs-s-p);
+        font-weight: var(--fw-regular);
+    }
+    .hero-button {
+        font-size: var(--fs-s-p);
+        font-weight: var(--fw-semibold);
+    }
+    /* menu navegacion */
+    nav {
+        padding: 3%;
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-links ul li {
+        display: block;
+        padding: 25px;
+    }
+    .nav-links {
+        position: fixed;
+        background: var(--clr-primary-background);
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        right: -100vw;
+        text-align: center;
+        z-index: 2;
+        transition: 1s;
+    }
+    /* Linea debajo del menu */
+    .nav-links li::after {
+        display: block;
+        margin: auto;
+        content: '';
+        width: 0%; /*para que esté oculta*/
+        height: 3px;/* grosor de linea */
+        background: var(--clr-accent);
+        transition: 0.5s;
+    }
+    .nav-links li:hover::after {
+        width: 100%; /* para que se muestre*/
+    }
+    /* iconos menu movil Font Awesome visibles */
+    nav .fas {
+        display: block;
+        color: var(--clr-neutral-white);
+        font-size: 25px;
+        cursor: pointer;
+        margin: 10px;
+        padding-top: 10px;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+
+    /* Tamano cards */
+    .cards-col {
+        display: block;
+        margin: auto;
+        width: 85%;
+        margin-bottom: 5%;
+    }
+
+    /* Seccion testimonios */
+    .testimonials-col{
+        display: block;
+        margin: auto;
+        width: 75%;
+        height: auto;
+        margin-top: 5%;
+    }
+    .testimonials-col img {
+        display: block;
+        margin: auto;
+        width: 30%;
+        height: auto;
+        padding: 5px;
+    }
+
+    /* --------------------- Footer ---------------------- */
+    .footer {
+        flex-direction: column;
+    }
+    .footer-logo {
+        width: 170px;
+        height: auto;
+    }
+    .social-icons i {
+        font-size: 20px;
+        padding: 20px 0;
+    }
+
+    /* --------------------- Quienes somos ---------------------- */
+    .about-col img {
+    width: 100%;
+    }
+
+    /* --------------------- Contacto ---------------------- */
+    .contact-col h4 {
+    font-size: var(--fs-s-h4);  
+    }
+}  
