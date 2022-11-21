@@ -47,14 +47,8 @@
     text-decoration: none;
     line-height: 1.5;
     font-family: var(--ff-body);
-}
-
-/* Reglas del Box sizing */
-*,
-*::before,
-*::after {
     box-sizing: border-box;
-} 
+}
 
 /* Removiendo el estilo de las listas con role list */
 ul[role="list"],
@@ -65,6 +59,16 @@ ol[role="list"] {
 /* Para trabajar mas facil con las imagenes */
 img, picture, svg {
     max-width: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 /* Textos */
@@ -112,7 +116,7 @@ p {
 
 /* Margen entre sectores */
 .mrgn {
-    margin-top: 5%;
+    margin: 5% 0;
 }
 .pdng {
     padding-top: var(--pdt);
@@ -281,9 +285,8 @@ nav .fas {
 .hvr-pictures img {
     display: block;
     width: 100%;
-    
 }
-.layer-pic {
+.layer-text {
     background: transparent;
     height: 100%;
     width: 100%;
@@ -293,10 +296,10 @@ nav .fas {
     transition: 0.5s;
     border-radius: 10px;
 }
-.layer-pic:hover {
+.layer-text:hover {
     background: rgba(60,60,59,0.5);
 }
-.layer-pic h3 {
+.layer-text h3 {
     width: 100%;
     font-weight: var(--fw-semibold);
     color: var(--clr-neutral-white);
@@ -307,7 +310,7 @@ nav .fas {
     opacity: 0;
     transition: 0.5s;
 }
-.layer-pic:hover h3 {
+.layer-text:hover h3 {
     bottom: 49%;
     opacity: 1;
     border-radius: 10px;
@@ -561,7 +564,7 @@ nav .fas {
     width: 100%;
     text-align: center;
     padding: 30px 60px;
-    margin-top: 200px;
+    margin-top: auto;
     background-color: var(--clr-dark-background);
     color: var(--clr-primary-text);
 }
@@ -569,21 +572,6 @@ nav .fas {
     width: 200px;
     height: auto;
 }
-/* .footer h4 {
-    margin-top: 20px;
-    padding: 10px;
-    font-weight: var(--fw-bold);
-}
-.contact-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.icons {
-    color: var(--clr-primary-background);
-    padding: 0 10px;
-} */
 .social-icons i {
     color: var(--clr-primary-background);
     font-size: 20px;
@@ -732,6 +720,14 @@ nav .fas {
         margin: auto;
         width: 85%;
         margin-bottom: 5%;
+    }
+
+    /* Seccion imagenes con capa */
+    .hvr-pictures {
+        display: block;
+        margin: auto;
+        width: 75%;
+        padding: 10px;
     }
 
     /* Seccion testimonios */
