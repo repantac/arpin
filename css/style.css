@@ -320,8 +320,8 @@ nav .fas {
 /* Seccion 5 index */
 .testimonials-col {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 25px;
     border-radius: 10px;
@@ -329,12 +329,13 @@ nav .fas {
     background-color: var(--clr-bg-soft);
 }
 .testimonials-col img {
+    display: block;
+    margin: auto;
     height: 60px;
-    margin-left: 5px;
-    margin-right: 30px;
 }
 .testimonials-col p {
     padding: 0;
+    margin-top: 10px;
 }
 .testimonials-col h3 {
     margin-top: 15px;
@@ -716,8 +717,6 @@ nav .fas {
 
     /* Tamano cards */
     .cards-col {
-        display: block;
-        margin: auto;
         width: 85%;
         margin-bottom: 5%;
     }
