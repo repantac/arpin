@@ -1,239 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1. ">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1. ">
+        <!-- Mi CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/69decef892.js" crossorigin="anonymous"></script>
 
-    <!-- Mi CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Fuente -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
-    <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/69decef892.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="resources/brand/favicon.svg" type="image/x-icon">
+        <title>Arqueología y Proyectos Integrales S.A.S</title>
+    </head>
 
-    <link rel="shortcut icon" href="resources/brand/favicon.svg" type="image/x-icon">
-    <title>Arqueología y Proyectos Integrales S.A.S</title>
-</head>
+    <body>
+        <header>
+            <!-- Primera seccion -->
+            <section class="header">
+                <nav>
+                    <div class="site-logo">
+                        <a href="index.html" title="Arqueologia y Proyectos Integrales">
+                            <img class="logo-image" src="resources/brand/logoNegativeMobile.png" alt="Arpin Logo">
+                        </a>
+                        <div>
+                            <h1>ARPIN</h1>
+                            <!-- <h2>Arqueologia y Proyectos Integrales</h2> -->
+                        </div>
+                    </div>
+                    <div class="nav-links" id="navLinks">
+                        <i class="fa-solid fa-xmark fas" onclick="hideMenu()"></i>
+                        <!-- icono de cierre menu font awesome -->
+                        <ul role="list">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="pages/nosotros.html">Nosotros</a></li>
+                            <li><a href="pages/servicios.html">Servicios</a></li>
+                            <li><a href="pages/proyectos.html">Proyectos</a></li>
+                            <li><a href="pages/blog.html">Blog</a></li>
+                            <li><a href="pages/contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <i class="fa-solid fa-bars fas" onclick="showMenu()"></i> <!-- icono de menu font awesome -->
+                </nav>
 
-<body>
-    <header>
-        <!-- Primera seccion -->
-        <section class="header">
-            <nav>
-                <div class="site-logo">
-                    <a href="index.html" title="Arqueologia y Proyectos Integrales">
-                        <img class="logo-image" src="resources/brand/logoNegativeMobile.png" alt="Arpin Logo">
-                    </a>
-                    <div>
-                        <h1>ARPIN</h1>
-                        <!-- <h2>Arqueologia y Proyectos Integrales</h2> -->
+                <div class="hero-textbox">
+                    <h1>Arqueología y Proyectos Integrales S.A.S</h1>
+                    <h3>
+                        Investigación, conservación y puesta en valor del patrimonio cultural y natural de Colombia.
+                    </h3>
+                    <button type="button" class="hero-button">
+                        <a href="pages/nosotros.html">Conózcanos</a>
+                    </button>
+                </div>
+            </section>
+
+        </header>
+        <main class="mrgn">
+
+            <!-- Seccion Cards -->
+            <section class="section">
+                <h2>¿Por qué elegirnos?</h2>
+                <p>
+                    Somos una empresa colombiana especializada en arqueología e investigación del patrimonio cultural y natural.
+                    Combinamos experiencia profesional con tecnología contemporánea para ofrecer soluciones integrales.
+                </p>
+        
+                <div class="section-row mrgn">
+                    <div class="cards-col">
+                        <h3>Experiencia</h3>
+                        <p>
+                            Contamos con un equipo de profesionales especializados en arqueología, patrimonio cultural
+                            y gestión de proyectos integrales en Colombia.
+                        </p>
+                    </div>
+                    <div class="cards-col">
+                        <h3>Compromiso</h3>
+                        <p>
+                            Trabajamos junto a las comunidades locales para garantizar el respeto, la preservación
+                            y la puesta en valor del patrimonio cultural y natural del país.
+                        </p>
+                    </div>
+                    <div class="cards-col">
+                        <h3>Innovación</h3>
+                        <p>
+                            Integramos conocimientos históricos tradicionales con avances tecnológicos contemporáneos
+                            para ofrecer resultados confiables y sostenibles.
+                        </p>
                     </div>
                 </div>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa-solid fa-xmark fas" onclick="hideMenu()"></i>
-                    <!-- icono de cierre menu font awesome -->
-                    <ul role="list">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="pages/servicios.html">Servicios</a></li>
-                        <li><a href="pages/proyectos.html">Proyectos</a></li>
-                        <li><a href="pages/blog.html">Blog</a></li>
-                        <li><a href="pages/contacto.html">Contacto</a></li>
-                    </ul>
+            </section>
+        
+            <!-- Seccion de imagenes con capa -->
+            <section class="section">
+                <h2>Nuestro trabajo</h2>
+                <p>Cada proyecto es una oportunidad de preservar la memoria colectiva de nuestras comunidades.</p>
+        
+                <div class="section-row mrgn">
+                    <div class="hvr-pictures">
+                        <img src="resources/layered/layered1.jpeg" alt="Investigación arqueológica">
+                        <div class="layer-text">
+                            <h3>Investigación arqueológica</h3>
+                        </div>
+                    </div>
+        
+                    <div class="hvr-pictures">
+                        <img src="resources/layered/layered2.jpeg" alt="Trabajo de campo">
+                        <div class="layer-text">
+                            <h3>Trabajo de campo</h3>
+                        </div>
+                    </div>
+        
+                    <div class="hvr-pictures">
+                        <img src="resources/layered/layered3.jpeg" alt="Análisis de hallazgos">
+                        <div class="layer-text">
+                            <h3>Análisis de hallazgos</h3>
+                        </div>
+                    </div>
                 </div>
-                <i class="fa-solid fa-bars fas" onclick="showMenu()"></i> <!-- icono de menu font awesome -->
-            </nav>
-
-            <div class="hero-textbox">
-                <h1>Arqueología y Proyectos Integrales S.A.S</h1>
-                <h3>
-                    Adipisci quod id minus sint reiciendis obcaecati <br />fugiat iste illum ex eos.
-                </h3>
+            </section>
+        
+            <!-- Seccion testimonios - convertida en clientes -->
+            <section class="section">
+                <h2>Lo que dicen de nosotros</h2>
+                <p>Trabajamos con instituciones públicas y privadas que confían en nuestra experiencia.</p>
+        
+                <div class="section-row mrgn">
+                    <div class="testimonials-col">
+                        <img src="resources/testimonials/man-avatar.png" alt="Cliente">
+                        <div>
+                            <p>"El equipo de ARPIN demostró gran profesionalismo durante todo el proceso de
+                            prospección arqueológica. Sus resultados fueron determinantes para nuestro proyecto."</p>
+                            <h3>Carlos Mendoza</h3>
+                            <p><em>Director de obra, constructora privada</em></p>
+                        </div>
+                    </div>
+        
+                    <div class="testimonials-col">
+                        <img src="resources/testimonials/man-avatar.png" alt="Cliente">
+                        <div>
+                            <p>"Su conocimiento del patrimonio cultural colombiano y su capacidad de gestión
+                            hicieron posible que nuestro proyecto cumpliera todos los requisitos legales."</p>
+                            <h3>Andrés Villanueva</h3>
+                            <p><em>Coordinador, entidad pública</em></p>
+                        </div>
+                    </div>
+        
+                    <div class="testimonials-col">
+                        <img src="resources/testimonials/woman-avatar.png" alt="Cliente">
+                        <div>
+                            <p>"Gracias a ARPIN pudimos identificar y preservar hallazgos de gran valor histórico
+                            para nuestra región. Un trabajo riguroso y comprometido."</p>
+                            <h3>Patricia Salcedo</h3>
+                            <p><em>Investigadora, universidad pública</em></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- CTA -->
+            <section class="contact-us">
+                <h2>¿Quiere saber más?</h2>
+                <h3>¡Este es un buen momento para conocernos! <br />
+                Cuéntenos qué necesita para encontrar la mejor solución</h3>
                 <button type="button" class="hero-button">
-                    <a href="pages/nosotros.html">Conócenos</a>
+                    <a href="pages/contacto.html">Contáctenos</a>
                 </button>
+            </section>
+        
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-logo">
+                <a href="pages/contacto.html" rel="noopener noreferrer">
+                    <img src="resources/brand/logo1.png" alt="Logo Arpin">
+                </a>
             </div>
-        </section>
 
-    </header>
-    <main class="mrgn">
-        <!-- Seccion Cards -->
-        <section class="section">
-            <h2>Sed, magni libero!</h2>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit.
-            </p>
-
-            <div class="section-row mrgn">
-                <div class="cards-col">
-                    <h3>Title here</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias voluptatem amet quia nulla
-                        libero fugiat ab animi illum rem, dolores eum
-                    </p>
-                </div>
-                <div class="cards-col">
-                    <h3>Title here</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias voluptatem amet quia nulla
-                        libero fugiat ab
-                        animi illum rem, dolores eum
-                    </p>
-                </div>
-                <div class="cards-col">
-                    <h3>Title here</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias voluptatem amet quia nulla
-                        libero fugiat ab
-                        animi illum rem, dolores eum
-                    </p>
-                </div>
+            <!-- Redes sociales -->
+            <div class="social-icons">
+                <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/arpincolombia/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
             </div>
-        </section>
 
-        <!-- Slider automatico -->
-        <!-- Seccion de imagenes con capa -->
-        <section class="section">
-            <h2>Another title here</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, magni, omnis quos a sunt vero
-                possimus</p>
+            <p>Medellín, Colombia.</p>
+            <p>2025</p>
+        </footer>
 
-            <div class="section-row mrgn">
-                <div class="hvr-pictures">
-                    <img src="resources/layered/layered1.jpeg" alt="Layered 1">
+        <!-- JS -->
+        <script>
+            // para ocultar y mostrar el menu movil
+            var navLinks = document.getElementById("navLinks");
 
-                    <div class="layer-text">
-                        <h3>text here</h3>
-                    </div>
-                </div>
-
-                <div class="hvr-pictures">
-                    <img src="resources/layered/layered2.jpeg" alt="Gallery 2">
-
-                    <div class="layer-text">
-                        <h3>text here</h3>
-                    </div>
-                </div>
-
-                <div class="hvr-pictures">
-                    <img src="resources/layered/layered3.jpeg" alt="Gallery 3">
-
-                    <div class="layer-text">
-                        <h3>text here</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seccion testimonios -->
-        <section class="section">
-            <h2>Another title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, magni, omnis quos a sunt vero
-                possimus</p>
-
-            <div class="section-row mrgn">
-                <div class="testimonials-col">
-                    <img src="resources/testimonials/man-avatar.png" alt="Imagen de usuario">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus soluta earum, totam ad
-                            aspernatur fuga.</p>
-                        <h3>Full name</h3>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonials-col">
-                    <img src="resources/testimonials/man-avatar.png" alt="Imagen de usuario">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus soluta earum, totam ad
-                            aspernatur fuga.</p>
-                        <h3>Full name</h3>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonials-col">
-                    <img src="resources/testimonials/woman-avatar.png" alt="Imagen de usuario">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus soluta earum, totam ad
-                            aspernatur fuga.</p>
-                        <h3>Full name</h3>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star-half-stroke"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Otra seccion -->
-        <section class="contact-us">
-            <h2>¿Quieres saber más?</h2>
-            <h3> ¡Este es un buen momento para conocernos! <br /> Cuéntanos qué necesitas para encontar la mejor
-                solución</h3>
-            <button type="button" class="hero-button">
-                <a href="pages/contacto.html">Contáctanos</a>
-            </button>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-logo">
-            <a href="pages/contacto.html" rel="noopener noreferrer">
-                <img src="resources/brand/logo1.png" alt="Logo Arpin">
-            </a>
-        </div>
-
-        <div class="social-icons">
-            <!-- <h4>Síguenos en nuestras redes</h4> -->
-            <a href="">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/arpincolombia/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-        </div>
-
-        <p>Medellín, Colombia.</p>
-        <p>2022</p>
-    </footer>
-
-    <!-- JS -->
-    <script>
-        // para ocultar y mostrar el menu movil
-        var navLinks = document.getElementById("navLinks");
-
-        function showMenu() {
-            navLinks.style.right = "0"; // Al hacer click el menu se hara visible
-        }
-        function hideMenu() {
-            navLinks.style.right = "-100vw"; // al hacer click el menu se oculta
-        }
-    </script>
-</body>
-
+            function showMenu() {
+                navLinks.style.right = "0"; // Al hacer click el menu se hara visible
+            }
+            function hideMenu() {
+                navLinks.style.right = "-100vw"; // al hacer click el menu se oculta
+            }
+        </script>
+    </body>
 </html>
